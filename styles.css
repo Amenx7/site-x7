@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: 'Arial', sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -43,6 +43,11 @@ nav ul li {
     display: inline;
 }
 
+.X7 {
+    display: initial;
+}
+
+/* Desktop Navigation */
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -51,13 +56,15 @@ nav ul li a {
     transition: background 0.7s;
 }
 
+/* Desktop: Navigation hover effect */
 nav ul li a:hover {
-    transition: 1.3s ;
+    transition: 1.3s;
     background-color: #3498db;
     border-radius: 15px;
     font-size: 25px;
 }
 
+/* Container */
 .container {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -65,6 +72,7 @@ nav ul li a:hover {
     margin-top: 50px;
 }
 
+/* Header */
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -75,6 +83,7 @@ p {
     margin-bottom: 30px;
 }
 
+/* Buttons */
 .buttons .button {
     display: inline-block;
     padding: 10px 20px;
@@ -87,14 +96,50 @@ p {
     font-size: 1.1em;
 }
 
+/* Button hover for desktop */
 .buttons .button:hover {
-    transition: 2s ;
-    background-color:blueviolet;
+    transition: 2s;
+    background-color: blueviolet;
     border-radius: 20px;
     font-size: 30px;
 }
 
+/* Footer */
 footer {
     margin-top: 20px;
     font-size: 1em;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 767px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .buttons .button {
+        padding: 12px 18px;
+        font-size: 1em;
+    }
 }
